@@ -22,8 +22,7 @@ galleryEl.style.flexDirection = 'column';
 
 
 const markupGallery = images.map(({ url, alt }) => {
-  return (`<li><img src=${url} alt=${alt} width = 500px></img></li>`);
+  return (`<li><img src="${url}" alt="${alt}" width = "500px"></img></li>`);
 }).join('');
-
 
 galleryEl.insertAdjacentHTML('afterbegin', markupGallery);
