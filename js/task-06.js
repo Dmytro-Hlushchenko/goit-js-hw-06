@@ -6,12 +6,12 @@ const inputMaxLengthEl = document.querySelector('input[data-length = "6"]');
 
 inputEl.addEventListener('blur', onInputCheck);
 
-
 function onInputCheck() {
     
-    if (inputEl.value.length <= inputMaxLengthEl.dataset.length) {
+    if (inputEl.value.length === Number(inputMaxLengthEl.dataset.length)) {
         inputEl.classList.add('valid');
         inputEl.classList.remove('invalid')
+        
     }
 
     else { 

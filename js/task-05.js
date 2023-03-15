@@ -9,6 +9,7 @@ function onInput() {
     if (textInputEl.value === "") {
         textOutputEl.textContent = 'Anonymous';
     }
+
     else {
         textOutputEl.textContent = textInputEl.value;
     }
