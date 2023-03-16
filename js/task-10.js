@@ -27,11 +27,7 @@ function getRandomHexColor() {
 createBtnEl.addEventListener('click', createBoxes);
 
 function createBoxes(amount) {
-  amount = Number.parseInt(inputEl.value);
-  let item = []
-  for (let i = 0; i < amount; i++) {
-    item = document.createElement('div');
-    console.loq(item)
-  }
-  
+  amount = Number(inputEl.value);
+  console.log(amount);
+
 }
