@@ -1,7 +1,7 @@
 
 
 const inputEl = document.querySelector('#validation-input');
-const inputMaxLengthEl = document.querySelector('input[data-length = "6"]');
+const inputMaxLengthEl = document.querySelector('input[data-length]');
 
 
 inputEl.addEventListener('blur', onInputCheck);

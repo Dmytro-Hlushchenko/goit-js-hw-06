@@ -13,21 +13,34 @@
 //  Створи функцію destroyBoxes(), яка очищає вміст div#boxes, у такий спосіб видаляючи всі створені
 //  елементи.
 
+
+//!!!При виконанні завдань замість більш звичного вам циклу for віддавайте перевагу методам масиву,
+ // що перебирають(це актуально як для 1 - 3 завдань, так і для 10 - го необов‘язкового).
+
 const inputEl = document.querySelector('input');
-const boxeslistEl = document.querySelector('#boxes');
+const boxesListEl = document.querySelector('#boxes');
 const createBtnEl = document.querySelector('button[data-create]');
 const destroyBtnEl = document.querySelector('button[data-destroy]');
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
+    .toString(16) 
     .padStart(6, 0)}`;
 }
 
 createBtnEl.addEventListener('click', createBoxes);
+destroyBtnEl.addEventListener('click', destroyBoxes);
 
 function createBoxes(amount) {
   amount = Number(inputEl.value);
-  console.log(amount);
+  const boxesArray = new Array(amount).fill(`<div></div>`).join('');
+   
+  console.log(boxesArray);
+  boxesListEl.insertAdjacentHTML('afterbegin', boxesArray);
+ 
+}
 
+
+function destroyBoxes() {
+  boxesListEl.innerHTML = '';
 }
